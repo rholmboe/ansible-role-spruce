@@ -1,0 +1,24 @@
+---
+- name: Verify
+  hosts: all
+  gather_facts: false
+  vars:
+    spruce_bin_path: "/usr/local/bin"
+    spruce_version: "{{ spruce_bin_path }}/spruce - Version 1.29.0"
+  tasks:
+    - name: Ensure Spruce is installed.
+      stat:
+        path: "{{ spruce_bin_path }}/spruce"
+      register: this_stat
+
+    - name: Get version from Spruce.
+      command: "{{ spruce_bin_path }}/spruce --version"
+      register: this_exec
+
+    - assert:
+        that:
+          - this_stat.stat.exists
+
+    - assert:
+        that:
+          - this_exec.stdout_lines[0] == spruce_version
