@@ -1,10 +1,10 @@
-# Ansible Role: Telepresence
+# Ansible Role: Spruce
 
-[![CI](https://github.com/rholmboe/ansible-role-telepresence/actions/workflows/ci.yml/badge.svg)](https://github.com/rholmboe/ansible-role-telepresence/actions/workflows/ci.yml)
-[![Ansible Role](https://img.shields.io/ansible/role/57223?logo=ansible)](https://galaxy.ansible.com/rholmboe/telepresence)
-[![Ansible Quality Score](https://img.shields.io/ansible/quality/57223?logo=ansible)](https://galaxy.ansible.com/rholmboe/telepresence)
+[![CI](https://github.com/rholmboe/ansible-role-spruce/actions/workflows/ci.yml/badge.svg)](https://github.com/rholmboe/ansible-role-spruce/actions/workflows/ci.yml)
+[![Ansible Role](https://img.shields.io/ansible/role/57227?logo=ansible)](https://galaxy.ansible.com/rholmboe/spruce)
+[![Ansible Quality Score](https://img.shields.io/ansible/quality/57227?logo=ansible)](https://galaxy.ansible.com/rholmboe/spruce)
 
-Installs [Telepresence](https://github.com/telepresenceio/telepresence), a Go-based local development against Kubernetes or OpenShift cluster.
+Installs [Spruce](https://github.com/geofffranks/spruce), a Go-based BOSH template merge tool.
 
 An honest duplication of [ansible-role-packer](https://github.com/geerlingguy/ansible-role-packer/) by [Jeff Geerling](https://www.jeffgeerling.com/)
 
@@ -17,28 +17,28 @@ None.
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
 ```
-    telepresence_version: "2.4.9"
+    spruce_version: "1.29.0"
 ```
 
-The telepresence version to install.
+The spruce version to install.
 
 ```
-    telepresence_arch: "amd64"
+    spruce_arch: "amd64"
 ```
 
 The system architecture (e.g. `386` or `amd64`) to use.
 
 ```
-    telepresence_bin_path: /usr/local/bin
+    spruce_bin_path: /usr/local/bin
 ```
 
-The location where the telepresence binary will be installed (should be in system `$PATH`).
+The location where the spruce binary will be installed (should be in system `$PATH`).
 
 The user/group which should own binary.
 
 ```
-    telepresence_user: "root"
-    telepresence_group: "root"
+    spruce_user: "root"
+    spruce_group: "root"
 ```
 
 ## Dependencies
@@ -49,7 +49,7 @@ None.
 
     - hosts: servers
       roles:
-        - rholmboe.telepresence
+        - rholmboe.spruce
 
 ## License
 
