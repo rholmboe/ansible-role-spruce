@@ -21,5 +21,3 @@ provisioner:
     verify: ${MOLECULE_PLAYBOOK:-../resources/verify.yml}
 verifier:
   name: ansible
-  options:
-    v: 1
