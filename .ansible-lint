@@ -19,7 +19,7 @@ parseable: true
 quiet: false
 
 skip_list:
-  - "301" # Commands should not change things if nothing needs doing'
+  - "301" # Commands should not change things if nothing needs doing
   - "305" # Use shell only when shell functionality is required
   - "306" # risky-shell-pipe
   - yaml # yamllint should be executed separately.

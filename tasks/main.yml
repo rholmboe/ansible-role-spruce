@@ -1,6 +1,6 @@
 ---
 - name: Download spruce binary to {{ spruce_bin_path }}
-  get_url:
+  ansible.builtin.get_url:
     url: "https://github.com/geofffranks/spruce/releases/download/v{{ spruce_version }}/spruce-linux-{{ spruce_arch }}"
     dest: "{{ spruce_bin_path }}/spruce"
     owner: "{{ spruce_user }}"
