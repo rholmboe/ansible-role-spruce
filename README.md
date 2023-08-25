@@ -17,7 +17,7 @@ None.
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
 ```
-    spruce_version: "1.29.0"
+    spruce_version: "1.30.2"
 ```
 
 The spruce version to install.

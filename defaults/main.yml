@@ -1,5 +1,5 @@
 ---
-spruce_version: "1.29.0"
+spruce_version: "1.30.2"
 spruce_arch: "amd64"
 spruce_bin_path: /usr/local/bin
 spruce_user: "root"
